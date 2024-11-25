@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  System Design
+  #
+
+Vex employs a deliberately streamlined architecture that prioritizes simplicity and performance. Unlike many traditional language implementations that utilize Abstract Syntax Trees (AST), Vex takes a more direct approach with just two main components:
+
+Lexer: Handles token generation
+Parser: Processes tokens and executes commands directly
+
+This design decision was made to minimize processing overhead while maintaining functionality for text processing operations.
+
+  Design Rationale
+  #
+
+
+  Why No AST?
+  #
+
+The decision to omit an AST was deliberate, based on several key factors:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/system-design/">
+  <meta property="og:site_name" content="Vex">
+  <meta property="og:title" content="Vex">
+  <meta property="og:description" content="System Design # Vex employs a deliberately streamlined architecture that prioritizes simplicity and performance. Unlike many traditional language implementations that utilize Abstract Syntax Trees (AST), Vex takes a more direct approach with just two main components:
+Lexer: Handles token generation Parser: Processes tokens and executes commands directly This design decision was made to minimize processing overhead while maintaining functionality for text processing operations.
+Design Rationale # Why No AST? # The decision to omit an AST was deliberate, based on several key factors:">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>System Design | Vex</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/system-design/">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.ff761150f00fbf0767e31187a5fff11806ddb9820856c7d10d51444e0b119dbd.js" integrity="sha256-/3YRUPAPvwdn4xGHpf/xGAbduYIIVsfRDVFETgsRnb0=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Vex</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/motivation/" class="">Motivation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/system-design/" class="active">System Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/usage/" class="">Usage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/getting-started/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/status/" class="">Status</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Features</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/features/filtering/" class="">Filtering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/features/find-and-replace/" class="">Find and Replace</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/features/input-output/" class="">Input Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/ezrantn/vex"  target="_blank" rel="noopener">
+        GitHub
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>System Design</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#system-design">System Design</a></li>
+    <li><a href="#design-rationale">Design Rationale</a>
+      <ul>
+        <li><a href="#why-no-ast">Why No AST?</a></li>
+        <li><a href="#processing-pipeline">Processing Pipeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#performance-considerations">Performance Considerations</a></li>
+    <li><a href="#error-handling">Error Handling</a></li>
+    <li><a href="#future-considerations">Future Considerations</a></li>
+    <li><a href="#development-workflow">Development Workflow</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="system-design">
+  System Design
+  <a class="anchor" href="#system-design">#</a>
+</h1>
+<p>Vex employs a deliberately streamlined architecture that prioritizes simplicity and performance. Unlike many traditional language implementations that utilize Abstract Syntax Trees (AST), Vex takes a more direct approach with just two main components:</p>
+<ul>
+<li>Lexer: Handles token generation</li>
+<li>Parser: Processes tokens and executes commands directly</li>
+</ul>
+<p>This design decision was made to minimize processing overhead while maintaining functionality for text processing operations.</p>
+<h1 id="design-rationale">
+  Design Rationale
+  <a class="anchor" href="#design-rationale">#</a>
+</h1>
+<h2 id="why-no-ast">
+  Why No AST?
+  <a class="anchor" href="#why-no-ast">#</a>
+</h2>
+<p>The decision to omit an AST was deliberate, based on several key factors:</p>
+<ul>
+<li><strong>Simplified Syntax:</strong> Vex&rsquo;s domain-specific nature means its syntax is straightforward enough that an AST would add unnecessary complexity</li>
+<li><strong>Performance Focus:</strong> Direct token processing reduces memory allocation and garbage collection overhead</li>
+<li><strong>Streaming Capability:</strong> The simplified architecture allows for efficient streaming of large text files</li>
+<li><strong>Reduced Complexity:</strong> Fewer components mean fewer potential points of failure</li>
+</ul>
+<h2 id="processing-pipeline">
+  Processing Pipeline
+  <a class="anchor" href="#processing-pipeline">#</a>
+</h2>
+<p>The text processing pipeline follows a simple flow:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Input Text → Lexer → Token Stream → Parser → Output
+</span></span></code></pre></div><p>This streamlined approach enables:</p>
+<ul>
+<li>Minimal memory footprint</li>
+<li>Direct processing of tokens</li>
+<li>Efficient handling of large files</li>
+</ul>
+<h1 id="performance-considerations">
+  Performance Considerations
+  <a class="anchor" href="#performance-considerations">#</a>
+</h1>
+<p>The simplified architecture brings several performance benefits:</p>
+<ol>
+<li>
+<p>Memory Efficiency</p>
+<ul>
+<li>No tree structure allocation/deallocation</li>
+<li>Reduced garbage collection pressure</li>
+<li>Lower memory footprint</li>
+</ul>
+</li>
+<li>
+<p>Processing Speed</p>
+<ul>
+<li>Direct token processing without tree traversal</li>
+<li>Streamlined execution path</li>
+<li>Fewer object allocations</li>
+</ul>
+</li>
+<li>
+<p>Scalability</p>
+<ul>
+<li>Efficient handling of large files</li>
+<li>Linear processing complexity</li>
+<li>Predictable resource usage</li>
+</ul>
+</li>
+</ol>
+<h1 id="error-handling">
+  Error Handling
+  <a class="anchor" href="#error-handling">#</a>
+</h1>
+<p>Error handling is implemented at both lexer and parser levels:</p>
+<ul>
+<li>Lexer: Handles character-level and token-level errors</li>
+<li>Parser: Manages syntax and semantic errors</li>
+<li>Runtime: Handles execution and I/O errors</li>
+</ul>
+<h1 id="future-considerations">
+  Future Considerations
+  <a class="anchor" href="#future-considerations">#</a>
+</h1>
+<p>While the current design is intentionally minimal, the architecture allows for future enhancements:</p>
+<ul>
+<li>Parallel processing capabilities</li>
+<li>Extended command set</li>
+<li>Plugin system</li>
+<li>Performance optimizations</li>
+</ul>
+<p>The design&rsquo;s simplicity makes it easier to maintain and extend while keeping the core functionality efficient and reliable.</p>
+<h1 id="development-workflow">
+  Development Workflow
+  <a class="anchor" href="#development-workflow">#</a>
+</h1>
+<p>The development process follows these principles:</p>
+<ul>
+<li>Maintain simplicity in both design and implementation</li>
+<li>Prioritize performance in architectural decisions</li>
+<li>Ensure robust error handling</li>
+<li>Keep the codebase maintainable and well-documented</li>
+</ul>
+<p>This architectural approach demonstrates that sometimes less is more - by focusing on essential components and eliminating unnecessary complexity, Vex achieves its goals of simplicity, performance, and reliability in text processing tasks.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/ezrantn/vex-docs/edit/main/exampleSite/content.en/docs/system-design.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#system-design">System Design</a></li>
+    <li><a href="#design-rationale">Design Rationale</a>
+      <ul>
+        <li><a href="#why-no-ast">Why No AST?</a></li>
+        <li><a href="#processing-pipeline">Processing Pipeline</a></li>
+      </ul>
+    </li>
+    <li><a href="#performance-considerations">Performance Considerations</a></li>
+    <li><a href="#error-handling">Error Handling</a></li>
+    <li><a href="#future-considerations">Future Considerations</a></li>
+    <li><a href="#development-workflow">Development Workflow</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

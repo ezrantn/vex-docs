@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Motivation
+  #
+
+The journey to create Vex began with a combination of academic curiosity and practical inspiration. As a student deeply interested in programming language design, I found myself drawn to the elegant simplicity of traditional UNIX text processing tools like awk and sed. These tools have stood the test of time, serving as the backbone of text manipulation in UNIX environments for decades. However, their syntax and learning curve can be challenging for newcomers, especially those from non-UNIX backgrounds.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://example.org/docs/motivation/">
+  <meta property="og:site_name" content="Vex">
+  <meta property="og:title" content="Vex">
+  <meta property="og:description" content="Motivation # The journey to create Vex began with a combination of academic curiosity and practical inspiration. As a student deeply interested in programming language design, I found myself drawn to the elegant simplicity of traditional UNIX text processing tools like awk and sed. These tools have stood the test of time, serving as the backbone of text manipulation in UNIX environments for decades. However, their syntax and learning curve can be challenging for newcomers, especially those from non-UNIX backgrounds.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Motivation | Vex</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://example.org/docs/motivation/">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.ff761150f00fbf0767e31187a5fff11806ddb9820856c7d10d51444e0b119dbd.js" integrity="sha256-/3YRUPAPvwdn4xGHpf/xGAbduYIIVsfRDVFETgsRnb0=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Vex</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/motivation/" class="active">Motivation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/system-design/" class="">System Design</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/usage/" class="">Usage</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/getting-started/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/status/" class="">Status</a>
+  
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Features</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/features/filtering/" class="">Filtering</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/features/find-and-replace/" class="">Find and Replace</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/features/input-output/" class="">Input Output</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/ezrantn/vex"  target="_blank" rel="noopener">
+        GitHub
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/themes/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Motivation</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#academic-goals">Academic Goals</a></li>
+    <li><a href="#design-philosophy">Design Philosophy</a></li>
+    <li><a href="#why-text-processing">Why Text Processing?</a></li>
+    <li><a href="#personal-growth">Personal Growth</a></li>
+    <li><a href="#looking-forward">Looking Forward</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="motivation">
+  Motivation
+  <a class="anchor" href="#motivation">#</a>
+</h1>
+<p>The journey to create Vex began with a combination of academic curiosity and practical inspiration. As a student deeply interested in programming language design, I found myself drawn to the elegant simplicity of traditional UNIX text processing tools like <code>awk</code> and <code>sed</code>. These tools have stood the test of time, serving as the backbone of text manipulation in UNIX environments for decades. However, their syntax and learning curve can be challenging for newcomers, especially those from non-UNIX backgrounds.</p>
+<p>This observation led me to an exciting academic opportunity - the chance to explore Domain-Specific Language (DSL) design for my thesis project. DSLs fascinate me because they represent the perfect intersection of theoretical computer science and practical utility. They&rsquo;re languages crafted for specific purposes, offering the potential to create more intuitive and efficient solutions for specialized tasks.</p>
+<p>The decision to focus on text processing wasn&rsquo;t arbitrary. While working with various data processing tasks, I noticed a gap between the power of traditional tools and the needs of modern developers. This gap presented an opportunity to contribute something meaningful to both the academic community and practical software development.</p>
+<h1 id="academic-goals">
+  Academic Goals
+  <a class="anchor" href="#academic-goals">#</a>
+</h1>
+<p>I&rsquo;m thrilled to be developing Vex as my thesis project - pending my professor&rsquo;s approval! This academic context adds an extra layer of depth to the project, as it requires not just practical implementation but also rigorous research and theoretical foundation. Through Vex, I aim to explore several key research questions:</p>
+<ul>
+<li>
+<p>How can modern programming language design principles be applied to create more intuitive text processing tools?</p>
+</li>
+<li>
+<p>What are the theoretical and practical considerations in designing a DSL for text processing?</p>
+</li>
+<li>
+<p>How can we balance power and simplicity in domain-specific language design?</p>
+</li>
+</ul>
+<h1 id="design-philosophy">
+  Design Philosophy
+  <a class="anchor" href="#design-philosophy">#</a>
+</h1>
+<p>The creation of Vex represents my first venture into DSL design, making it both a learning journey and a research endeavor. My approach focuses on:</p>
+<ul>
+<li><strong>Learning Through Creation:</strong> Building a DSL from scratch provides invaluable insights into language design principles</li>
+<li><strong>Academic Exploration:</strong> Investigating the theoretical foundations of DSL design while creating a practical tool</li>
+<li><strong>User-Centric Design:</strong> Focusing on making text processing more accessible without sacrificing functionality</li>
+</ul>
+<h1 id="why-text-processing">
+  Why Text Processing?
+  <a class="anchor" href="#why-text-processing">#</a>
+</h1>
+<p>While <code>awk</code> and <code>sed</code> are powerful tools that I deeply respect, I believe there&rsquo;s room for innovation in how we approach text processing. My motivation isn&rsquo;t to replace these tools, but rather to:</p>
+<ul>
+<li>Create a more approachable entry point for newcomers to text processing</li>
+<li>Explore modern language design principles in a practical context</li>
+<li>Bridge the gap between traditional UNIX tools and contemporary programming paradigms</li>
+<li>Provide a cross-platform solution that maintains consistency across different operating systems</li>
+</ul>
+<h1 id="personal-growth">
+  Personal Growth
+  <a class="anchor" href="#personal-growth">#</a>
+</h1>
+<p>This project represents more than just a technical challenge - it&rsquo;s a stepping stone in my academic journey. Through Vex, I hope to:</p>
+<ul>
+<li>Gain hands-on experience in language design and implementation</li>
+<li>Contribute meaningful research to the field of domain-specific languages</li>
+<li>Create something that could potentially help others in their text processing tasks</li>
+<li>Develop a deeper understanding of both theoretical and practical aspects of programming language development</li>
+</ul>
+<p>As I await my professor&rsquo;s approval for this thesis project, I&rsquo;m excited about the potential impact Vex could have in both academic and practical contexts. The journey of creating a DSL has already taught me valuable lessons about language design, user experience, and the delicate balance between innovation and practicality.</p>
+<h1 id="looking-forward">
+  Looking Forward
+  <a class="anchor" href="#looking-forward">#</a>
+</h1>
+<p>Whether or not Vex becomes widely adopted, the process of its creation and the academic research behind it represent valuable contributions to our understanding of DSL design and implementation. I look forward to sharing my findings with the academic community and continuing to explore the fascinating world of domain-specific languages.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/ezrantn/vex-docs/edit/main/exampleSite/content.en/docs/motivation.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#academic-goals">Academic Goals</a></li>
+    <li><a href="#design-philosophy">Design Philosophy</a></li>
+    <li><a href="#why-text-processing">Why Text Processing?</a></li>
+    <li><a href="#personal-growth">Personal Growth</a></li>
+    <li><a href="#looking-forward">Looking Forward</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
