@@ -1,8 +1,10 @@
 # Find and Replace
 
+Vex makes finding and replacing text in files simple and efficient. Here's how you can use it:
+
 ## Single Find and Replace
 
-To perform a find-and-replace operation on a file using Vex, follow this syntax:
+To perform a single find-and-replace operation, use the following syntax:
 
 ```shell
 vex replace "foo:bar=input.txt"
@@ -14,7 +16,7 @@ vex replace "foo:bar=input.txt"
 - `bar`: The text you want to replace it with.
 - `input.txt`: The file where the operation will be performed.
 
-This command follows the general format:
+## Command Format
 
 ```shell
 [find:replace=<textinput>]
@@ -22,7 +24,7 @@ This command follows the general format:
 
 ## Batch Find and Replace
 
-You can now perform multiple find-and-replace operations in a single command. The syntax for batch operations is as follows:
+Vex also supports multiple find-and-replace operations in a single command. Here's the syntax:
 
 ```shell
 vex replace "foo1,foo2,foo3:bar1,bar2,bar3=input.txt"
@@ -50,7 +52,7 @@ Operation:
 
 ## Case Sensitivity
 
-The replace command is case-sensitive by default. To enable case-insensitive find-and-replace, use the `-i` flag:
+By default, the replace command is **case-sensitive**. To make it **case-insensitive**, use the `-i` flag:
 
 ```shell
 vex replace "foo:bar=input.txt" -i

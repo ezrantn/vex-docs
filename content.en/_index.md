@@ -5,14 +5,14 @@ type: docs
 
 # Overview
 
-In the ever-changing world of software development, dealing with text can be a real pain for developers. That’s where Vex comes to the rescue! It’s a cool blend of a command-line interface (CLI) and a domain-specific language (DSL) made just for text manipulation and analysis. With Vex, we get a fresh and easier way to handle all that text in our projects!
+Text processing can be a tough challenge for developers, but that's where Vex steps in! Vex is a powerful combination of a command-line interface (CLI) and a domain-specific language (DSL) designed to make text manipulation and analysis simpler and more efficient. With Vex, handling text in your projects becomes easier and more intuitive.
 
-Vex was born from a mix of academic research and real-world needs. While classic tools like `awk` and `sed` have been solid go-tos in the UNIX world for ages, the increasing complexity of modern text processing has opened the door for new solutions. Vex isn’t here to replace those old-timers; instead, it offers a modern alternative with its own cool benefits.
+Inspired by both academic research and practical needs, Vex bridges the gap between traditional tools like `awk` and `sed` and the demands of modern text processing. While these UNIX classics have been reliable for decades, Vex brings a fresh approach with unique features tailored to today's needs. It's not here to replace them but to offer a modern alternative.
 
 # License
 
-Vex is an open-source project released under the MIT License.
+Vex is open source and available under the MIT License.
 
 # Contributions
 
-We’d love for you to contribute! Feel free to jump in and help out!
+We welcome your contributions! Jump in and help make Vex even better.

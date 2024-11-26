@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docs on Vex</title>
-    <link>http://localhost:1313/docs/</link>
+    <link>https://example.org/docs/</link>
     <description>Recent content in Docs on Vex</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/docs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/docs/motivation/</link>
+      <link>https://example.org/docs/motivation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/motivation/</guid>
+      <guid>https://example.org/docs/motivation/</guid>
       <description>&lt;h1 id=&#34;motivation&#34;&gt;&#xA;  Motivation&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#motivation&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;The journey to create Vex began with a combination of academic curiosity and practical inspiration. As a student deeply interested in programming language design, I found myself drawn to the elegant simplicity of traditional UNIX text processing tools like &lt;code&gt;awk&lt;/code&gt; and &lt;code&gt;sed&lt;/code&gt;. These tools have stood the test of time, serving as the backbone of text manipulation in UNIX environments for decades. However, their syntax and learning curve can be challenging for newcomers, especially those from non-UNIX backgrounds.&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/docs/system-design/</link>
+      <link>https://example.org/docs/system-design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/system-design/</guid>
+      <guid>https://example.org/docs/system-design/</guid>
       <description>&lt;h1 id=&#34;system-design&#34;&gt;&#xA;  System Design&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#system-design&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Vex employs a deliberately streamlined architecture that prioritizes simplicity and performance. Unlike many traditional language implementations that utilize Abstract Syntax Trees (AST), Vex takes a more direct approach with just two main components:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Lexer: Handles token generation&lt;/li&gt;&#xA;&lt;li&gt;Parser: Processes tokens and executes commands directly&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This design decision was made to minimize processing overhead while maintaining functionality for text processing operations.&lt;/p&gt;&#xA;&lt;h1 id=&#34;design-rationale&#34;&gt;&#xA;  Design Rationale&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#design-rationale&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-no-ast&#34;&gt;&#xA;  Why No AST?&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#why-no-ast&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The decision to omit an AST was deliberate, based on several key factors:&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/docs/usage/</link>
+      <link>https://example.org/docs/usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/usage/</guid>
+      <guid>https://example.org/docs/usage/</guid>
       <description>&lt;h1 id=&#34;usage&#34;&gt;&#xA;  Usage&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#usage&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;The heart of Vex lies in its straightforward syntax:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vex &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;command&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;pattern&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;examples&#34;&gt;&#xA;  Examples&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#examples&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vex replace &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;foo:bar=input.txt&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vex load &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:=input.txt&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vex save &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;:=output&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vex filter &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello=world.js&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/docs/getting-started/</link>
+      <link>https://example.org/docs/getting-started/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/getting-started/</guid>
+      <guid>https://example.org/docs/getting-started/</guid>
       <description>&lt;h1 id=&#34;getting-started&#34;&gt;&#xA;  Getting Started&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#getting-started&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;For now, feel free to experiment with Vex’s initial capabilities. You can find a basic usage guide below:&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;&#xA;  Prerequisites&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#prerequisites&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Ensure the following is installed:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;  &lt;a href=&#34;https://go.dev/doc/install&#34;&gt;Go&lt;/a&gt; (v1.23 or higher)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;&#xA;  Installation&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#installation&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;You can install Vex by running a following command:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;go install github.com/ezrantn/vex@latest&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check if Vex already installed in your system:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vex version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/docs/status/</link>
+      <link>https://example.org/docs/status/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/docs/status/</guid>
+      <guid>https://example.org/docs/status/</guid>
       <description>&lt;h1 id=&#34;status&#34;&gt;&#xA;  Status&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#status&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Vex is currently in active development. While initial capabilities are available for exploration, further enhancements and detailed documentation are in progress. Updates and new features will be shared as they become available.&lt;/p&gt;</description>
     </item>
   </channel>
